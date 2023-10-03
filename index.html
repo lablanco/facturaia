@@ -18,6 +18,15 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="canonical" href="https://www.facturaIA.ar/">
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Z2RB3PL00"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3Z2RB3PL00');
+  </script>
   <body>
     <!-- Move to up button -->
     <div class="scroll-button">
@@ -25,29 +34,11 @@
     </div>
     <header>
       <nav class="navbar">
-        <!-- <h2 class="logo"><a href="#">Factura IA</a></h2>
-        <input type="checkbox" id="menu-toggler">
-        <label for="menu-toggler" id="hamburger-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
-            <path d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
-          </svg>
-        </label>
-        <ul class="all-links">
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#portfolio">Clientes</a></li>
-          <li><a href="#about">Sobre Nosotros</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul> -->
         <div class="media-icons">
           <a href="https://www.instagram.com/facturaia/">
             <i class="fab fa-instagram"></i>
           </a>
         </div>
-        <!-- <div class="menu-btn">
-          <i class="fas fa-bars"></i>
-        </div> -->
       </nav>
     </header>
 
@@ -58,43 +49,32 @@
           <h2>Automatiza la carga de facturas de compras.</h2>
           <p>Optimizá tiempos, costos y recursos.</p>
         </div>
-        <a href="#contact">Hablemos</a>
+        <div class="buttons">
+          <a href="#contact">Hablemos</a>
+          <!-- <a id="openModalBtn">Prueba Gratis!</a> -->
+        </div>
+        <div id="myModal" class="modal">
+        <div class="modal-content">
+
+          <h2>Cargue una Factura</h2>
+          <span class="close"></span>
+            <p>Ingrese su email y suba un archivo PDF, la respuesta es un archivo en formato excel que se envía por email.</p>
+            <form action="process.php" method="POST" enctype="multipart/form-data">                
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="file" name="archivo" accept=".pdf" required>
+                <button type="submit">Enviar</button>
+                <button id="cancelBtn">Cancelar</button>
+            </form>
+            <div id="statusMessage"></div>
+        </div>
       </div>
     </section>
 
-    <!-- <section class="about" id="about">
-      <h2>Automatización de la Carga de Facturas de Compras.</h2>
-      <p>Descubre de que se trata el servicio.</p>
-      <img src="images/proceso.png" alt="img">
-      <div class="row company-info">
-        <h3>Eficiencia Mejorada</h3>
-        <p>La automatización de tareas repetitivas y manualmente intensivas permite que las facturas se procesan más rápido y con menos errores. Esto reduce la carga de trabajo para el personal y acelera el flujo de trabajo de cuentas por pagar.</p>
-      </div>
-      <div class="row mission-vision">
-        <h3>Precisión y reducción de errores</h3>
-        <p>FacturaIA es capaz de reconocer y extraer información clave de las facturas de manera precisa, como números de factura, fechas, cantidades y detalles de los proveedores. Esto minimiza los errores humanos y garantiza una mayor precisión en la contabilidad y el seguimiento financiero.</p>
-        <h3>Ahorro de tiempo y recursos</h3>
-        <p>Al eliminar la necesidad de entrada manual de datos, los empleados pueden dedicar su tiempo a tareas más estratégicas y de mayor valor. Esto puede traducirse en una mejor utilización de los recursos humanos y una mayor productividad en general.</p>
-        <h3>Mejora en la toma de decisiones</h3>
-        <p>Con acceso a datos financieros precisos y actualizados, podemos tomar decisiones más informadas sobre nuestra gestión financiera y estrategias comerciales.</p>
-        <h3>Sin Complicaiones</h3>
-        <p>Nuestra solución se integra de manera fluida con los sistemas y software de gestión financiera existentes, minimizando las interrupciones y los costos de implementación.</p>
-      </div>
-      
-      <div class="row team">
-        <h3>El Servicio</h3>
-        <ul>
-          <li>Sin Licencias y sin Productos o Sistemas a Instalar</li>
-          <li>Fácil de usar - envias las facturas al email de FacturaIA o le pedís a tu proveedor que las envie al email de FacturaIA</li>
-          <li>Sin complicaciones.</li>
-        </ul>
-      </div>
-    </section> -->
-
+ 
     <section class="services" id="services">
       <h1>Nuestro Servicio</h1>
       <p>Conoce el servicio que brindamos desde Factura IA.</p>
-      <img src="images/proceso.png" alt="img">
+      <img src="images/proceso.avif" width="1091" height="357" alt="img">
       <ul class="cards">
         <li class="card">
           <i class="fa-solid fa-envelope"></i>
@@ -129,47 +109,8 @@
       </ul>
     </section>
 
-    <!-- <section class="portfolio" id="portfolio">
-      <h2>Our Portfolio</h2>
-      <p>Take a look at some of our memorable camping adventures.</p>
-      <ul class="cards">
-        <li class="card">
-          <img src="images/camping-1.jpg" alt="img">
-          <h3>Mountain Hiking</h3>
-          <p>Embark on an exhilarating hiking adventure in the breathtaking mountain ranges.</p>
-        </li>
-        <li class="card">
-          <img src="images/camping-2.jpg" alt="img">
-          <h3>Lakeside Camping</h3>
-          <p>Enjoy a tranquil camping experience by the serene shores of picturesque lakes.</p>
-        </li>
-        <li class="card">
-          <img src="images/camping-3.jpg" alt="img">
-          <h3>Beach Camping</h3>
-          <p>Escape to sandy beaches and camp under the starry sky by the crashing waves.</p>
-        </li>
-        <li class="card">
-          <img src="images/camping-4.jpg" alt="img">
-          <h3>Forest Exploration</h3>
-          <p>Discover the wonders of lush forests and immerse yourself in nature's beauty.</p>
-        </li>
-        <li class="card">
-          <img src="images/camping-5.jpg" alt="img">
-          <h3>RV Camping</h3>
-          <p>Experience the freedom of road trips and camping adventures with our RV rentals.</p>
-        </li>
-        <li class="card">
-          <img src="images/camping-6.jpg" alt="img">
-          <h3>Desert Camping</h3>
-          <p>Embark on a unique desert camping experience and witness stunning landscapes.</p>
-        </li>
-      </ul>
-    </section> -->
-
-
-
     <section class="contact" id="contact">
-      <h2>Contacto</h2>
+      <h1>Contacto</h1>
       <p>Comuníquese con nosotros para cualquier consulta o comentario.</p>
       <div class="row">
         <div class="col information">
@@ -177,31 +118,27 @@
             <p><i class="fas fa-map-marker-alt"></i> Belgrano, CABA, Argentina</p>
             <p><i class="fas fa-envelope"></i> info@facturaia.com</p>
             <p><i class="fa-brands fa-whatsapp"></i> (011) 3682-5070</p>
-            <p><i class="fas fa-clock"></i> Lunes - Viernes: 9:00 AM - 5:00 PM</p>
-            <p><i class="fas fa-clock"></i> Sabados y Domingos: Cerrado</p>
             <p><i class="fas fa-globe"></i> www.FacturaIA.com</p>
           </div>          
         </div>
         <div class="col form">
-          <form>
-            <input type="text" placeholder="Nombre*" required>
-            <input type="email" placeholder="Email*" required>
-            <textarea placeholder="Mensaje*" required></textarea>
-            <button id="submit" type="submit">Enviar</button>
-          </form>
+          <img src="images/Luis_FacturaIA.png" width="256" height="256" alt="img">
         </div>
       </div>
     </section>
 
     <footer>
       <div>
-        <span>Copyright © 2023 - Factura IA - Todos los derechos reservados</span>
+        <span>Copyright © 2023 Factura IA. Todos los derechos reservados.</span>
         <span class="link">
-            <a href="#">Inicio</a>
-            <a href="#contact">Contacto</a>
+          <a href="./legal.html">Términos de Uso</a>
+          <a target="_blank" rel="noopener noreferrer"> | </a>
+          <a href="./privacy.html">Privacy</a>
+          <a target="_blank" rel="noopener noreferrer"> | </a>
+          <a href="#">Inicio</a>
         </span>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
