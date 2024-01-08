@@ -68,22 +68,28 @@ nav .navbar .menu li{
 }
 
 .navbar .media-icons .lnk :hover{  /* Linkedin */
-  color: #0e76a8;
+  color: #0077B5;
 }
 
 .navbar .media-icons .insta :hover{  /* instagram */
-  color: #FD1D1D;
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .navbar .media-icons .tiktok:hover{  /* tiktok */
-  color: #00fff8;
+  color: #111111;
+  filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
 }
-f
 .navbar .media-icons .face:hover{  /* facebook */
-  color: #3b5998;
+  color: #1877F2;
 }
-.navbar .media-icons .twitter:hover{  /* facebook */
-  color: #00acee;
+.navbar .media-icons .twitter:hover{  /* Twitter */
+  color: #000000
+
+  ;
 }
 
 
