@@ -1,0 +1,161 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+/* navbar styling */
+nav{
+  position: fixed;
+  width: 100%;
+  z-index: 998;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+}
+
+nav .navbar{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+nav .navbar .logo a{
+  font-weight: 700;
+  font-size: 55px;
+  color: #000099;
+}
+
+nav .navbar .text a{
+  font-size: 20px;
+  font-weight: 500;
+}
+nav .navbar img {
+  float: left;
+  display: inline;
+  width: 70px;
+  height: 60px;
+  margin: auto;
+}
+
+nav .navbar .menu{
+  display: flex;
+  position: relative;
+}
+nav .navbar .menu li{
+  list-style: none;
+  margin: 0 8px;
+}
+.navbar .menu a{
+  font-size: 18px;
+  font-weight: 500;
+  color: #f1f1f1;
+  padding: 6px 0;
+  transition: all 0.4s ease;
+}
+
+/* Media Icons */
+.navbar .media-icons a{
+  color: #000099;
+  font-size: 40px;
+  margin: 0 6px;
+}
+
+.navbar .media-icons .lnk :hover{  /* Linkedin */
+  color: #0e76a8;
+}
+
+.navbar .media-icons .insta :hover{  /* instagram */
+  color: #FD1D1D;
+}
+
+.navbar .media-icons .tiktok:hover{  /* tiktok */
+  color: #00fff8;
+}
+f
+.navbar .media-icons .face:hover{  /* facebook */
+  color: #3b5998;
+}
+.navbar .media-icons .twitter:hover{  /* facebook */
+  color: #00acee;
+}
+
+
+/* home section styling */
+.home{
+  height: 90vh;
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+.home .home-content{
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home .text-one{
+  font-size: 25px;
+  color: #f1f1f1;
+}
+.home .text-two{
+  font-size: 60px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+.home .text-three{
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+.home .text-four{
+  font-size: 65px;
+  font-weight: 600;
+  margin: 5px 0;
+  color: red;
+}
+.home .button{
+  margin: 14px 0;
+}
+.home .button button{
+  outline: none;
+  padding: 18px 26px;
+  border-radius: 6px;
+  font-size: 25px;
+  font-weight: 500;
+  background: #333333;;
+  color: #f1f1f1;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+.home .button button:hover{
+  border-color: #ffd300;
+  background-color: #f1f1f1;
+  color: #333333;
+}
+
+/* Footer CSS */
+footer{
+  background: #000099;
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+footer .text span{
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+}
+footer .text span a{
+  font-weight: 500;
+  color: #FFF;
+}
