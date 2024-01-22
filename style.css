@@ -60,8 +60,6 @@ nav .navbar .menu li{
   transition: all 0.4s ease;
 }
 
-
-
 /* Media Icons */
 .navbar .media-icons a{
   color: #000099;
@@ -97,7 +95,6 @@ nav .navbar .menu li{
   color: red
   ;
 }
-
 
 /* home section styling */
 .home{
@@ -171,7 +168,6 @@ footer .text span a{
   font-weight: 500;
   color: #FFF;
 }
-
 
 /* Estilos para la barra de navegación en dispositivos móviles */
 @media screen and (max-width: 768px) {
