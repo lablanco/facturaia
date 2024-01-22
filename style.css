@@ -88,7 +88,11 @@ nav .navbar .menu li{
 }
 .navbar .media-icons .twitter:hover{  /* Twitter */
   color: #000000
+  ;
+}
 
+.navbar .media-icons .youtube:hover{  /* Youtube */
+  color: red
   ;
 }
 
