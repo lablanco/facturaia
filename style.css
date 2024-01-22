@@ -60,6 +60,8 @@ nav .navbar .menu li{
   transition: all 0.4s ease;
 }
 
+
+
 /* Media Icons */
 .navbar .media-icons a{
   color: #000099;
@@ -168,4 +170,47 @@ footer .text span{
 footer .text span a{
   font-weight: 500;
   color: #FFF;
+}
+
+
+/* Estilos para la barra de navegación en dispositivos móviles */
+@media screen and (max-width: 768px) {
+  nav .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  nav .navbar .logo a {
+    margin-bottom: 15px; /* Espaciado entre el logo y otros elementos en dispositivos móviles */
+  }
+
+  nav .navbar .text {
+    order: 3; /* Cambia el orden de aparición en dispositivos móviles */
+  }
+
+  nav .navbar .media-icons {
+    margin-top: 15px; /* Espaciado entre el texto y los íconos en dispositivos móviles */
+  }
+
+  .home .text-two {
+    font-size: 40px; /* Ajusta el tamaño del texto */
+  }
+
+  body {
+    font-size: 16px; /* Tamaño de fuente general para dispositivos móviles */
+  }
+
+  nav .navbar .menu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav .navbar .menu li {
+    margin: 8px 0; /* Espaciado entre elementos del menú en dispositivos móviles */
+  }
+
+  .footer .text span {
+    font-size: 14px; /* Tamaño de fuente en el pie de página para dispositivos móviles */
+  }
+  
 }
