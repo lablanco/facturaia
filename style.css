@@ -1,212 +1,228 @@
-/* Google Font CDN Link */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Ubuntu:wght@400;500;700&display=swap');
-*{
+/* Importing Google font - Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
-  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
 }
 
-/* navbar styling */
-nav{
+body {
+  background: #1B1B1D;
+}
+
+header {
   position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
-  z-index: 998;
-  transition: all 0.3s ease;
-  font-family: 'Roboto', sans-serif;
-  background-color: #fff;
+  z-index: 1;
+  padding: 20px;
 }
 
-nav .navbar{
-  width: 90%;
+header .navbar {
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: auto;
-}
-nav .navbar .logo a{
-  font-weight: 700;
-  font-size: 55px;
-  color: #000099;
+  justify-content: space-between;
 }
 
-nav .navbar .text a{
-  font-size: 20px;
-  font-weight: 500;
+header .navbar .logo h1{
+    color: #fff;
+    font-size: 40px;
 }
-nav .navbar img {
-  float: left;
-  display: inline;
-  width: 70px;
-  height: 60px;
-  margin: auto;
-}
-
-nav .navbar .menu{
+.navbar .menu-links {
   display: flex;
-  position: relative;
-}
-nav .navbar .menu li{
+  align-items: center;
   list-style: none;
-  margin: 0 8px;
-}
-.navbar .menu a{
-  font-size: 18px;
-  font-weight: 500;
-  color: #f1f1f1;
-  padding: 6px 0;
-  transition: all 0.4s ease;
+  gap: 30px;
 }
 
-/* Media Icons */
-.navbar .media-icons a{
-  color: #000099;
-  font-size: 40px;
-  margin: 0 6px;
+.navbar .menu-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s ease;
 }
 
-.navbar .media-icons .lnk :hover{  /* Linkedin */
-  color: #0077B5;
+.navbar .menu-links li a:hover {
+  color: #00fa85;
 }
 
-.navbar .media-icons .insta :hover{  /* instagram */
-  color: transparent;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  background-clip: text;
-  -webkit-background-clip: text;
+.navbar .menu-links .join-btn a {
+  border: 1px solid #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
 }
 
-.navbar .media-icons .tiktok:hover{  /* tiktok */
-  color: #111111;
-  filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
-}
-.navbar .media-icons .face:hover{  /* facebook */
-  color: #1877F2;
-}
-.navbar .media-icons .twitter:hover{  /* Twitter */
-  color: #000000
-  ;
+.navbar .menu-links .join-btn a:hover {
+  color: #fff;
+  border-color: transparent;
+  background: #1dbf73;
 }
 
-.navbar .media-icons .youtube:hover{  /* Youtube */
-  color: red
-  ;
-}
-
-/* home section styling */
-.home{
-  height: 90vh;
-  width: 100%;
-  background-color: #f3f3f3;
-}
-
-.home .home-content{
-  width: 90%;
-  height: 100%;
-  margin: auto;
+.hero-section {
+  height: 100vh;
+  background-image: url("images/front_image.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 0 20px;
+  align-items: center;
 }
 
-.home .text-one{
-  font-size: 25px;
-  color: #f1f1f1;
+.hero-section .content {
+  max-width: 1280px;
+  margin: 0 auto 40px;
+  width: 100%;
 }
-.home .text-two{
-  font-size: 60px;
-  font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+
+.hero-section .content h1 {
+  color: #fff;
+  font-size: 3rem;
+  max-width: 630px;
+  line-height: 65px;
 }
-.home .text-three{
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
+
+.hero-section button {
+    outline: none;
+    padding: 18px 26px;
+    border-radius: 6px;
+    font-size: 25px;
+    font-weight: 500;
+    background: #333333;;
+    color: #f1f1f1;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
 }
-.home .text-four{
-  font-size: 65px;
-  font-weight: 600;
-  margin: 5px 0;
-  color: red;
-}
-.home .button{
-  margin: 14px 0;
-}
-.home .button button{
-  outline: none;
-  padding: 18px 26px;
-  border-radius: 6px;
-  font-size: 25px;
-  font-weight: 500;
-  background: #333333;;
-  color: #f1f1f1;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: all 0.4s ease;
-}
-.home .button button:hover{
+
+.hero-section button:hover {
   border-color: #ffd300;
   background-color: #f1f1f1;
   color: #333333;
 }
 
-/* Footer CSS */
-footer{
-  background: #000099;
-  padding: 15px 0;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-}
-footer .text span{
-  font-size: 17px;
-  font-weight: 400;
+.hero-section .tags li a {
+  text-decoration: none;
   color: #fff;
-}
-footer .text span a{
-  font-weight: 500;
-  color: #FFF;
+  border: 1px solid #fff;
+  padding: 4px 12px;
+  border-radius: 50px;
+  transition: 0.2s ease;
 }
 
-/* Estilos para la barra de navegación en dispositivos móviles */
-@media screen and (max-width: 768px) {
-  nav .navbar {
-    flex-direction: column;
+.hero-section .tags li a:hover {
+  color: #000;
+  background: #fff;
+}
+
+.navbar #hamburger-btn {
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 1.7rem;
+}
+
+.navbar #close-menu-btn {
+  position: absolute;
+  display: none;
+  color: #000;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+@media screen and (max-width: 900px) {
+  header.show-mobile-menu::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar .menu-links {
+    height: 100vh;
+    max-width: 300px;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    left: -300px;
+    top: 0;
+    display: block;
+    padding: 75px 40px 0;
+    transition: left 0.2s ease;
+  }
+
+  header.show-mobile-menu .navbar .menu-links {
+    left: 0;
+  }
+
+  header .navbar .logo h1{
+    color: #fff;
+  }
+
+  .navbar .menu-links li {
+    margin-bottom: 30px;
+  }
+
+  .navbar .menu-links li a {
+    color: #000;
+    font-size: 1.1rem;
+  }
+
+  .navbar .menu-links .join-btn a {
+    padding: 0;
+  }
+
+  .navbar .menu-links .join-btn a:hover {
+    color: #1dbf73;
+    background: none;
+  }
+
+  .navbar :is(#close-menu-btn, #hamburger-btn) {
+    display: block;
+  }
+
+  .hero-section {
+    background: none;
+  }
+
+  .hero-section .content {
+    margin: 0 auto 80px;
+  }
+
+  .hero-section .content :is(h1, .search-form) {
+    max-width: 100%;
+  }
+
+  .hero-section .content h1 {
     text-align: center;
+    font-size: 2.5rem;
+    line-height: 55px;
+  }
+
+  .hero-section .search-form {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .hero-section .search-form input {
+    border-radius: 4px;
   }
   
-  nav .navbar .logo a {
-    margin-bottom: 15px; /* Espaciado entre el logo y otros elementos en dispositivos móviles */
+  .hero-section .search-form button {
+    margin-top: 10px;
+    border-radius: 4px;
+    width: 100%;
   }
 
-  nav .navbar .text {
-    order: 3; /* Cambia el orden de aparición en dispositivos móviles */
+  .hero-section .popular-tags {
+    display: none;
   }
-
-  nav .navbar .media-icons {
-    margin-top: 15px; /* Espaciado entre el texto y los íconos en dispositivos móviles */
-  }
-
-  .home .text-two {
-    font-size: 40px; /* Ajusta el tamaño del texto */
-  }
-
-  body {
-    font-size: 16px; /* Tamaño de fuente general para dispositivos móviles */
-  }
-
-  nav .navbar .menu {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav .navbar .menu li {
-    margin: 8px 0; /* Espaciado entre elementos del menú en dispositivos móviles */
-  }
-
-  .footer .text span {
-    font-size: 14px; /* Tamaño de fuente en el pie de página para dispositivos móviles */
-  }
-  
 }
