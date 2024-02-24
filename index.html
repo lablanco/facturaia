@@ -35,11 +35,44 @@
             gtag('js', new Date());
         
             gtag('config', 'AW-16465120372');
+            // https://github.com/miguelcolmenares/whatsapp-widget
             </script>
-        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <div class="elfsight-app-d8a869f6-2e3a-4207-a030-3e4acac98715" data-elfsight-app-lazy></div>
-        <!-- Fontawesome Link for Icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+            <script type="text/javascript">
+              !function(w,h,a,t,s,p){
+                  w.whatsapp || (
+                  s = h.createElement(a),
+                  s.src = t,
+                  p = h.getElementsByTagName(a)[0],
+                  p.parentNode.insertBefore(s, p)
+              )}(window, document, "script", "https://cdn.jsdelivr.net/gh/miguelcolmenares/whatsapp-widget/dist/js/whatsapp-widget.js");
+              window.addEventListener('load', function(){
+                  new whatsapp({
+                      title: 'Te gustaría obtener más Información?',
+                      description: 'Chatea con nosotros por Whatsapp de Lunes a Viernes de 9 a 18hs',
+                      agents:[{
+                          name: "Servicio al cliente",
+                          phone: "+54 911 36825070",
+                          hours: "Disponible 9am - 6pm",
+                          cta: "Haz clic para iniciar chat",
+                          message: "Hola, me gustaría obtener más información",
+                          schedule: [
+                              ["1:00", "1:00"], //Sundays or Holidays
+                              ["9:00", "18:00"],
+                              ["9:00", "18:00"],
+                              ["9:00", "18:00"],
+                              ["9:00", "18:00"],
+                              ["9:00", "18:00"],
+                              ["1:00", "1:00"] // Saturday
+                          ]
+                      },{
+                          name: "Servicio al cliente",
+                          phone: "+54 911 36825070",
+                          hours: "Disponible 9am - 6pm",
+                          cta: "Haz clic para iniciar chat"
+                      }]
+                  })
+              });
+              </script>
     </head>
 
   <body>
@@ -166,5 +199,6 @@
         </span>
       </div>
     </footer>
+
   </body>
 </html>
