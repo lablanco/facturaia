@@ -80,8 +80,8 @@ header a:hover, footer a:hover {
   height: 100vh;
   width: 100%;
   position: relative;
-  background: url("images/front_image.jpg");
-  background-position: center 65%;
+  background: url("images/AI_manos.webp");
+  background-position: center 50%;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -163,9 +163,15 @@ section .cards {
   justify-content: space-between;
 }
 
+section.beneficios {
+  margin: 0 auto;
+  background: #fff;
+}
+
 section.about {
   margin: 0 auto;
   max-width: 1200px;
+  margin-bottom: 20px;
 }
 
 .about .company-info {
@@ -207,6 +213,11 @@ section .cards .card {
 .cards .card p {
   padding: 0 15px;
   margin-top: 5px;
+}
+
+section.contact {
+  margin: 0 auto;
+  background-color: #fff;
 }
 
 .about .row {
