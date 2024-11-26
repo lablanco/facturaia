@@ -140,10 +140,12 @@ header a:hover, footer a:hover {
 }
 
 section {
+  width: 100%; /* Ensures sections span the full width */
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 80px 0 0;
+  padding: 80px 20px;
+  box-sizing: border-box; /* Includes padding in width calculation */
 }
 
 section h2 {
@@ -165,6 +167,12 @@ section .cards {
 
 section.beneficios {
   margin: 0 auto;
+  background: #fff;
+}
+
+
+section.flow {
+  margin: 0 auto;  
   background: #fff;
 }
 
