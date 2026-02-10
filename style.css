@@ -76,11 +76,34 @@ header a:hover, footer a:hover {
   color: #ddd;
 }
 
+.top-announcement {
+  width: 100%;
+  background: #fff;
+  color: #333;
+  text-align: center;
+  padding: 12px 10px;
+  font-size: 18px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-top: 75px; /* compensa header fixed */
+}
+
+.top-announcement a {
+  color: #000099;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.top-announcement a:hover {
+  text-decoration: underline;
+}
+
+
 .homepage {
   height: 100vh;
   width: 100%;
   position: relative;
-  background: url("images/background_image.jpg");
+  background: url("images/background_image.png");
   background-position: center 50%;
   background-size: cover;
   background-attachment: fixed;
@@ -98,17 +121,19 @@ header a:hover, footer a:hover {
 
 .homepage .content {
   display: flex;
-  height: 85%;
+  height: 100%;
   z-index: 3;
+  justify-content: flex-start; /* antes center */
+  padding-top: 140px; /* lo sube visualmente */
   align-items: center;
-  justify-content: center;
   flex-direction: column;
 }
 
 .homepage .content h1 {
-  font-size: 50px;
+  font-size: 72px;
   font-weight: 700;
-  margin-bottom: 10px;
+  line-height: 1.05;
+  letter-spacing: -1px;
 }
 
 .homepage .content .text {
@@ -168,6 +193,30 @@ section.beneficios {
   background: #fff;
 }
 
+.beneficios h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.beneficios-subtitle {
+  max-width: 700px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #666;
+  font-size: 18px;
+}
+
+.beneficios .card {
+  transition: 0.25s ease;
+  border-radius: 10px;
+}
+
+.beneficios .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
 
 section.flow {
   margin: 0 auto;  
@@ -382,5 +431,97 @@ footer a {
   section .cards .card {
     width: 100%;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .homepage .content h1 {
+    font-size: 38px;
+  }
+}
+
+
+
+/*****************************************************************************/
+
+
+.hero-container {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* TITULO PRINCIPAL */
+.homepage .content h1 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* SUBTITULO */
+.hero-subtitle {
+  font-size: 22px;
+  color: #fff;
+  opacity: 0.95;
+  margin-bottom: 35px;
+}
+
+/* BOTONES */
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.btn-primary {
+  background: #000099;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #0000cc;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* PRUEBA SOCIAL */
+.hero-proof {
+  font-size: 15px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+
+@media screen and (max-width: 860px) {
+  .homepage .content h1 {
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
   }
 }
